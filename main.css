@@ -15,19 +15,15 @@ body {
     padding: 0;
     /* position: absolute;
     top: 0; left: 0; bottom: 0; right: 0; */
-    background: radial-gradient(circle, transparent 50%, black 150%);
-    animation: bg 0.01s forwards;
-    animation-delay: 3.5s;
     overflow: hidden;
 }
 
-@keyframes bg {
-    from {
-        background: radial-gradient(circle, transparent 50%, black 150%);
-    }
-    to {
-        background: radial-gradient(circle, transparent -10%, black 100%);
-    }
+html {
+    overflow: hidden;
+}
+
+body.fuck {
+    background: radial-gradient(circle, transparent -10%, black 100%);
 }
 
 @keyframes typing {
@@ -68,7 +64,7 @@ body {
 
 #fuck {
     display: inline-block;
-    animation: rotate 3.6s linear 3.5s infinite;
+    animation: rotate 1.8s linear 3.5s infinite;
 }
 
 #robin {

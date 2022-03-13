@@ -17,9 +17,6 @@ style.innerHTML = keyFrames;
 document.getElementsByTagName('head')[0].appendChild(style);
 
 let audio = new Audio("spearofjustice.mp3");
-setTimeout(() => {
-    audio.play()
-}, 3500);
 
 function fuckRobin() {
     let img = document.createElement('img');
@@ -44,10 +41,6 @@ function fuckRobin() {
         img.remove()
     }, 1500)
 }
-
-setTimeout(() => {
-    setInterval(fuckRobin, 100)
-}, 3500)
 
 function fuckword() {
     let text = document.createElement('div');
@@ -74,6 +67,18 @@ function fuckword() {
     }, 2500)
 }
 
-setTimeout(() => {
-    setInterval(fuckword, 100)
-}, 3500)
+active = false;
+let start = () => {
+    if (!active) {
+        active = true;
+        document.body.innerHTML = `<div id="fuckyou"><span id="fuck">FUCK </span><span id="robin">ROBIN</span></div>`
+        setTimeout(() => {
+            audio.play()
+            setInterval(fuckRobin, 100)
+            setInterval(fuckword, 100)
+            document.body.classList.add("fuck")
+        }, 3500);
+    }
+}
+document.addEventListener("click", start)
+document.addEventListener("touchstart", start)
