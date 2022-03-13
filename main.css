@@ -46,6 +46,17 @@ body.fuck {
     }
 }
 
+#imsorry {
+    text-align: center;
+    width: 10ch;
+    font-family: 'Agave', monospace;
+    font-size: 15vmin;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 #fuckyou {
     text-align: center;
     width: 10ch;
