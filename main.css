@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Agave';
+    font-weight: bold;
+    src: url("Agave-Bold.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0; */
+    background: radial-gradient(circle, transparent 50%, black 150%);
+    animation: bg 0.01s forwards;
+    animation-delay: 3.5s;
+    overflow: hidden;
+}
+
+@keyframes bg {
+    from {
+        background: radial-gradient(circle, transparent 50%, black 150%);
+    }
+    to {
+        background: radial-gradient(circle, transparent -10%, black 100%);
+    }
+}
+
+@keyframes typing {
+    from {
+        overflow: hidden;
+        width: 0;
+    }
+    to {
+        overflow: hidden;
+        width: 5ch;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#fuckyou {
+    text-align: center;
+    width: 10ch;
+    font-family: 'Agave', monospace;
+    font-size: 15vmin;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    overflow: visible;
+    white-space: nowrap;
+    animation: typing 3.5s steps(5);
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+#fuck {
+    display: inline-block;
+    animation: rotate 3.6s linear 3.5s infinite;
+}
+
+#robin {
+    filter: drop-shadow(0 0 3.5vmin red);
+    color: red;
+    display: inline-block;
+    animation: FUCK 2.5s linear infinite;
+    animation-delay: 3.5s;
+}
+
+#robin::after {
+    display: inline-block;
+    position: relative;
+    left: -50%;
+    content: 'ROBIN';
+    animation: FUCK 2.5s linear infinite;
+    animation-delay: 3.5s;
+    color: transparent;
+    -webkit-text-stroke: .02ch black;
+    /* text-stroke: 1.5vmin black; */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fuckface {
+    position: absolute;
+    transform-origin: 50% 80%;
+    transition: top 1s, left 1s;
+    animation: rotate .5s linear infinite, fade .25s linear 1s forwards;
+    z-index: -100;
+}
+
+.fuckword {
+    position: absolute;
+    font-size: 8vmin;
+    font-family: 'Agave', monospace;
+    transition: top 2s, left 2s;
+    color: darkred;
+    animation: rotate .8s linear infinite, fade .25s linear 1s forwards;
+    z-index: -99;
+}
