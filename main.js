@@ -17,6 +17,7 @@ style.innerHTML = keyFrames;
 document.getElementsByTagName('head')[0].appendChild(style);
 
 let audio = new Audio("spearofjustice.mp3");
+audio.loop = true;
 
 function fuckRobin() {
     let img = document.createElement('img');
